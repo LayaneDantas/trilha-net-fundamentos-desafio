@@ -1,4 +1,5 @@
 ﻿using DesafioFundamentos.Models;
+using System.ComponentModel.Design;
 
 // Coloca o encoding para UTF8 para exibir acentuação
 Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -32,11 +33,26 @@ while (exibirMenu)
     switch (Console.ReadLine())
     {
         case "1":
-            es.AdicionarVeiculo();
+            Console.WriteLine("Digite a placa do veículo para estacionar:");
+            string veiculoEntrada = Console.ReadLine();
+            es.AdicionarVeiculo(veiculoEntrada);
             break;
 
         case "2":
-            es.RemoverVeiculo();
+
+            Console.WriteLine("Digite a placa do veículo para remover :");
+            string placa = Console.ReadLine();
+            if (es.ConsultarVeiculo(placa)) 
+            {
+                Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
+                int horas = int.Parse(Console.ReadLine());
+                es.RemoverVeiculo(placa, horas);
+            }
+            else
+            {
+                Console.WriteLine("Desculpe, esse veículo não está estacionado aqui. Confira se digitou a placa corretamente");
+            }
+
             break;
 
         case "3":

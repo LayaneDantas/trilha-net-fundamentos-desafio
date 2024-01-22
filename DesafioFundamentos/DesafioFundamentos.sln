@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioFundamentos", "DesafioFundamentos.csproj", "{07CC1F82-31B5-4352-9BEA-7EE65FE64902}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstacionamentoTestes", "..\EstacionamentoTestes\EstacionamentoTestes.csproj", "{F830E95B-20FB-4984-A4D9-4A4A29A08BEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07CC1F82-31B5-4352-9BEA-7EE65FE64902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07CC1F82-31B5-4352-9BEA-7EE65FE64902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07CC1F82-31B5-4352-9BEA-7EE65FE64902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07CC1F82-31B5-4352-9BEA-7EE65FE64902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F830E95B-20FB-4984-A4D9-4A4A29A08BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F830E95B-20FB-4984-A4D9-4A4A29A08BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F830E95B-20FB-4984-A4D9-4A4A29A08BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F830E95B-20FB-4984-A4D9-4A4A29A08BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E84420E-5062-47BC-AA37-F2BC43AD0AD4}
+	EndGlobalSection
+EndGlobal

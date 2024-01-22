@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace DesafioFundamentos.Models
 {
     public class Estacionamento
@@ -12,53 +14,42 @@ namespace DesafioFundamentos.Models
             this.precoPorHora = precoPorHora;
         }
 
-        public void AdicionarVeiculo()
+
+
+
+        public void AdicionarVeiculo(string veiculo)
         {
 
-         
-            Console.WriteLine("Digite a placa do veículo para estacionar:");
-            string veiculo = Console.ReadLine();
             veiculos.Add(veiculo);
 
         }
 
-        public void RemoverVeiculo()
+        public void RemoverVeiculo(string placa, int horas)
         {
-            Console.WriteLine("Digite a placa do veículo para remover:");
+       
+            decimal valorTotal = precoInicial + precoPorHora * horas;
 
-     
-            string placa = Console.ReadLine();
 
-            // Verifica se o veículo existe
-            if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
-            {
-                Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
+            veiculos.Remove(placa);
+            Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal}");
 
-           
-                
-                int horas = 0;
-                decimal valorTotal = 0;
-
-                horas = Convert.ToInt32(Console.ReadLine());  
-                valorTotal = precoInicial + precoPorHora * horas;
-               
-
-                veiculos.Remove(placa);
-                Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal}");
-            }
-            else
-            {
-                Console.WriteLine("Desculpe, esse veículo não está estacionado aqui. Confira se digitou a placa corretamente");
-            }
         }
 
-        public void ListarVeiculos()
+        //Verifica se o veículo existe
+        public bool ConsultarVeiculo(string placa)
+        {
+
+            return veiculos.Any(x => x.ToUpper() == placa.ToUpper());
+
+        }
+
+        public List<string> ListarVeiculos()
         {
             // Verifica se há veículos no estacionamento
             if (veiculos.Any())
             {
                 Console.WriteLine("Os veículos estacionados são:");
-            
+
 
                 foreach (var veiculo in veiculos)
                 {
@@ -66,11 +57,15 @@ namespace DesafioFundamentos.Models
                 }
 
             }
-            
+
             else
             {
                 Console.WriteLine("Não há veículos estacionados.");
             }
+
+            return veiculos; 
+
         }
+
     }
 }
