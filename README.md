@@ -36,3 +36,7 @@ Por último, deverá ser feito um menu interativo com as seguintes ações imple
 
 ## Solução
 O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+
+## Melhorias Aplicadas
+
+Foram realizadas algumas melhorias no projeto, entre elas, foi criada uma classe para testes unitários, esses testes englobam e validam os métodos de Adicionar Veículo, Remover Veículo e Listar Veículo, para isso fiz alguns ajustes na classe "Estacionamento" e na classe "Program" para que os testes pudessem ser realizados.  
