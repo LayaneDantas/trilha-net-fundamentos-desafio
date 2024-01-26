@@ -65,4 +65,4 @@ Adicionadas as seguintes variáveis:
 |ListarVeiculos_DeveExibirListaDeVeiculos                         | Testa o método "ListarVeiculos" onde adicionamos alguns veículos e verificamos se foram adicionados a lista.                                                   |
 
 Diagrama do sistema com as alterações descritas:
-![Diagrama de classe estacionamento](Estacionamento.png)
+![Diagrama de classe estacionamento](Estacionamento01.png)
