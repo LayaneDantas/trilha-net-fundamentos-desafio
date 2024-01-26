@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioFundamentos", "DesafioFundamentos.csproj", "{07CC1F82-31B5-4352-9BEA-7EE65FE64902}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstacionamentoTestes", "..\EstacionamentoTestes\EstacionamentoTestes.csproj", "{F830E95B-20FB-4984-A4D9-4A4A29A08BEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioFundamentosTestes", "..\DesafioFundamentosTestes\DesafioFundamentosTestes.csproj", "{F830E95B-20FB-4984-A4D9-4A4A29A08BEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

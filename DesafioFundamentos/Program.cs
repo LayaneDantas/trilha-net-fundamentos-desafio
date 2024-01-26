@@ -42,11 +42,10 @@ while (exibirMenu)
 
             Console.WriteLine("Digite a placa do veículo para remover :");
             string placa = Console.ReadLine();
-            if (es.ConsultarVeiculo(placa)) 
+            if (es.ConsultarVeiculo(placa))
             {
-                Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
-                int horas = int.Parse(Console.ReadLine());
-                es.RemoverVeiculo(placa, horas);
+               
+                es.RemoverVeiculo(placa);
             }
             else
             {

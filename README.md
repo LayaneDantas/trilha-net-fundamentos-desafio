@@ -7,7 +7,7 @@ Para este desafio, você precisará usar seus conhecimentos adquiridos no módul
 ## Contexto
 Você foi contratado para construir um sistema para um estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
 
-## Proposta
+## Proposta do Bootcamp
 Você precisará construir uma classe chamada "Estacionamento", conforme o diagrama abaixo:
 ![Diagrama de classe estacionamento](diagrama_classe_estacionamento.png)
 
@@ -39,4 +39,30 @@ O código está pela metade, e você deverá dar continuidade obedecendo as regr
 
 ## Melhorias Aplicadas
 
-Foram realizadas algumas melhorias no projeto, entre elas, foi criada uma classe para testes unitários, esses testes englobam e validam os métodos de Adicionar Veículo, Remover Veículo e Listar Veículo, para isso fiz alguns ajustes na classe "Estacionamento" e na classe "Program" para que os testes pudessem ser realizados.  
+Foram realizadas algumas melhorias no projeto, entre elas, foram adicionados dois métodos a classe Estacionamento:
+
+| Método          |    Objetivo                                                                                                                                                                                                                                    |
+|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ValidarPlaca    |  Como seu nome já indica valida a placa indicada pelo usuário, verificando se possui 3 letras e 4 números.                                                                                                                                     |
+| ConsultarVeiculo|  Consulta se o veiculo indicado pelo usuário consta na lista de veiculos, antes essa mesma função era realizada no método RemoverVeiculo, mas tive que fazer um método só para essa função para um melhor funcionamentos dos testes unitários. |
+
+Adicionadas as seguintes variáveis:
+
+| Variável             | Objetivo                                                                                                                                                                                                                                                                                                                         |
+|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| capacidadeMaxima     | Trata-se de um private const int onde implementamos o número de veículos que o Estacionamento comporta.                                                                                                                                                                                                                          |
+| horarioEntrada       | Trata-se de uma classe Dictionary privada que armazenará o horário de entrada do veículo no Estacionamento para que ao final seja cobrado o valor de forma automática considerando o valor da saída que também será dada de forma automática no momento do pedido de remoção do veículo, trazendo uma maior segurança ao sistema |
+
+
+ E por fim, foi criada uma classe para testes unitários, esses testes englobam: 
+ 
+| Teste                                                           | Objetivo:                                                                                                                                                      |
+|-----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|ValidacaoPlaca_DeveVerificarSeAPlacaEhValidaOuInvalida           | Testa o método "validarPlaca" onde inserimos uma placa válida e uma inválida e verificamos se o sistema retorna as ações esperadas.                            |
+|AdicionarVeiculo_DeveAdicionarVeiculoALista                      | Testa o método "AdicionarVeiculo" onde iserimos um veículo para verificar se o sistema está respondendo da forma esperada.                                     |
+|Capacidade_DeveTestarACapacidadeMaxima                           | Testa a variável "capacidadeMaxima" tentamos adicionar um veículo a mais do que a capacidade limite para verificar se o sistema manteria a capacidade fixada.  |
+|RemoverVeiculo_VeiculoExistente_DeveRemoverVeiculo               | Testa o método "RemoverVeiculo" onde inserimos e depois removemos um veículo para testar se o sistema retornaria a ação esperada.                              |
+|ListarVeiculos_DeveExibirListaDeVeiculos                         | Testa o método "ListarVeiculos" onde adicionamos alguns veículos e verificamos se foram adicionados a lista.                                                   |
+
+Diagrama do sistema com as alterações descritas:
+![Diagrama de classe estacionamento](Estacionamento.png)
